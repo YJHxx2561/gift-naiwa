@@ -122,7 +122,7 @@ body {
   justify-content: center;
   min-height: 100vh;
   min-height: 100svh;
-  padding: 28px 22px calc(90px + var(--safe-bottom));
+  padding: 28px 22px calc(116px + var(--safe-bottom));
 }
 
 .icp-footer {
@@ -159,14 +159,43 @@ body {
 }
 
 .icp-powered {
-  margin-top: 2px;
+  margin-top: 3px;
   font-size: 12px;
+  line-height: 1.6;
   color: rgba(143, 165, 203, 0.8);
 }
 
 .icp-powered a {
   color: #ffe0a8;
   font-weight: 600;
+}
+
+/* ---------- 运行时间 ---------- */
+
+.uptime-line {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 4px;
+  font-size: 12px;
+  color: var(--ice-500);
+}
+
+.uptime-line svg {
+  flex: none;
+  color: #ffcf6b;
+  opacity: 0.85;
+}
+
+.uptime-num {
+  color: #ffcf6b;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.uptime-num b {
+  font-weight: 700;
 }
 
 /* ---------- 访问统计 ---------- */
@@ -660,7 +689,7 @@ h1 em {
   flex-direction: column;
   height: 100%;
   min-height: 0;
-  padding: calc(16px + var(--safe-top)) clamp(16px, 4vw, 32px) calc(94px + var(--safe-bottom));
+  padding: calc(16px + var(--safe-top)) clamp(16px, 4vw, 32px) calc(120px + var(--safe-bottom));
 }
 
 .topbar {
@@ -849,7 +878,35 @@ h1 em {
 
 @media (max-width: 420px) {
   .page {
-    padding: 18px 14px calc(82px + var(--safe-bottom));
+    padding: 18px 14px calc(150px + var(--safe-bottom));
+  }
+
+  /* 窄屏页脚：收紧行距、缩小字号，避免四行内容过高 */
+  .icp-footer {
+    bottom: calc(4px + var(--safe-bottom));
+    padding: 4px 10px;
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .visit-stats {
+    gap: 2px 12px;
+    margin-bottom: 2px;
+    font-size: 11px;
+  }
+
+  .uptime-line {
+    margin-bottom: 2px;
+    font-size: 11px;
+  }
+
+  .icp-powered {
+    margin-top: 2px;
+    font-size: 10.5px;
+  }
+
+  .play-wrap {
+    padding-bottom: calc(150px + var(--safe-bottom));
   }
 
   .card {
@@ -898,7 +955,7 @@ h1 em {
 /* 矮屏：压缩落地页间距 */
 @media (max-height: 620px) {
   .page {
-    padding: 12px 16px calc(82px + var(--safe-bottom));
+    padding: 12px 16px calc(116px + var(--safe-bottom));
   }
 
   .card {
