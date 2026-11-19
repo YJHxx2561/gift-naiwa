@@ -122,7 +122,7 @@ body {
   justify-content: center;
   min-height: 100vh;
   min-height: 100svh;
-  padding: 28px 22px calc(66px + var(--safe-bottom));
+  padding: 28px 22px calc(90px + var(--safe-bottom));
 }
 
 .icp-footer {
@@ -167,6 +167,39 @@ body {
 .icp-powered a {
   color: #ffe0a8;
   font-weight: 600;
+}
+
+/* ---------- 访问统计 ---------- */
+
+.visit-stats {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 4px 18px;
+  margin-bottom: 4px;
+  font-size: 12px;
+  color: var(--ice-500);
+}
+
+.visit-stat {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+.visit-stat svg {
+  flex: none;
+  color: #ffcf6b;
+  opacity: 0.85;
+}
+
+.stat-num {
+  color: #ffcf6b;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  margin-left: 2px;
 }
 
 /* ---------- 拒绝无效小剧场 ---------- */
@@ -627,7 +660,7 @@ h1 em {
   flex-direction: column;
   height: 100%;
   min-height: 0;
-  padding: calc(16px + var(--safe-top)) clamp(16px, 4vw, 32px) calc(70px + var(--safe-bottom));
+  padding: calc(16px + var(--safe-top)) clamp(16px, 4vw, 32px) calc(94px + var(--safe-bottom));
 }
 
 .topbar {
@@ -816,7 +849,7 @@ h1 em {
 
 @media (max-width: 420px) {
   .page {
-    padding: 18px 14px calc(58px + var(--safe-bottom));
+    padding: 18px 14px calc(82px + var(--safe-bottom));
   }
 
   .card {
@@ -865,7 +898,7 @@ h1 em {
 /* 矮屏：压缩落地页间距 */
 @media (max-height: 620px) {
   .page {
-    padding: 12px 16px calc(58px + var(--safe-bottom));
+    padding: 12px 16px calc(82px + var(--safe-bottom));
   }
 
   .card {
